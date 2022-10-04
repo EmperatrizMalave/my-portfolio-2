@@ -1,0 +1,42 @@
+
+.container-header{
+background-color: #760F1C;
+padding-top: 20px;
+padding-right: 20px;
+}
+
+.text-nav {
+
+color: white;
+}
+
+.nav-item {
+
+background-color: #760F1C;
+height: 65px;
+display: flex;
+align-items: center;
+font-weight: bold;
+
+}
+
+/*Estilos para bordes de nav*/
+.line{
+border-top: 1px solid #F1B500;
+border-bottom: 1px solid #F1B500;
+}
+
+
+.line:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-left: 1px solid #F1B500;
+
+}
+
+.line:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: 1px solid #F1B500;
+
+}
