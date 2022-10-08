@@ -262,39 +262,32 @@
 
     color: white;
     display: inline-block;
-    width: 50%;
 }
 
-.main-of-the-circle {
+.main-of-the-circle-1 {
     margin-bottom: 19px;
     display: flex;
-    flex-basis: 50%;
+    width: 50%;
     align-items: center;
     flex-direction: column;
+
 }
 
 
+/*PROFESIONAL SKILLS*/
+.icons-e {
+    color: white;
+    margin-right: 10px;
 
-
-
-.progress-bar {
-    animation: progress-bar-stripes 1s linear infinite;
 }
 
-/*@keyframes progress-bar-stripes {
-    0% {
-        left: 0;
-    }
 
-    50% {
-        left: 100%;
-    }
+.list-check{
+    color: white;
+    list-style: none; 
+    padding-top: 8px;
+}
 
-    0% {
-        left: 0;
-    }
-}*/
- 
 .collage-name {
 
     color: white;
@@ -315,9 +308,6 @@
     margin-bottom: 4px;
  }
 
-.title-p {
-    color: #F1B500;
-}
 
 .skill-area-line {
     padding-top: 20px;
@@ -326,3 +316,77 @@
 .skill-area-circle {
     padding-top: 20px;
 }
+
+/*EDUCATION*/
+
+.design-ov1 {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ebb6168c;
+    left: -6px;
+    top: -14px;
+
+}
+
+.line-design {
+    position: relative;
+    height: 100px;
+    width: 2px;
+    background-color: #ebb6168c;
+}
+
+
+.design-ov2 { 
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ebb6168c;
+    top: 79px;
+    left: -6px;
+
+}
+
+.collage-name {
+    display: inline-block;
+
+}
+
+.title-2 {
+    border-bottom: 1px solid #F1B500;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    color: white;
+    font-size: 21px;
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+    text-transform: uppercase
+
+}
+
+.title-2::before{
+
+    position: absolute;
+    content: "";
+    width: 110px;
+    height: 2.4px;
+    background: #131CD8;
+    left: 0px;
+    bottom: -2px;
+    
+}
+
+.name-list {
+
+    list-style: none;
+    text-align: left;
+    
+}
+
+/*.degree {
+
+
+}*/
