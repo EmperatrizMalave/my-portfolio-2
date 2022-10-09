@@ -272,21 +272,9 @@ color: #F1B500;
 
 }
 
-/*.main-of-the-circle-1 {
-   
-    margin-bottom: 19px;
-    display: flex;
-    width: 50%;
-    align-items: center;
-    flex-direction: column;
-
-
-}*/
-
-
 /*PROFESIONAL SKILLS*/
 .icons-e {
-    color: white;
+    color: #F1B500;
     margin-right: 10px;
 
 }
@@ -296,6 +284,8 @@ color: #F1B500;
     color: white;
     list-style: none; 
     padding-top: 8px;
+    padding-bottom: 8px;
+    line-break: 2px;
 }
 
 .collage-name {
@@ -354,13 +344,8 @@ color: #F1B500;
     height: 14px;
     border-radius: 50%;
     background-color: #ebb6168c;
-    top: 79px;
+    top: 98px;
     left: -6px;
-
-}
-
-.collage-name {
-    display: inline-block;
 
 }
 
@@ -392,8 +377,18 @@ color: #F1B500;
 .name-list {
 
     list-style: none;
-    text-align: left;
-    
+    white-space: nowrap;
+    text-align: justify;
+}
+
+.education-list {
+
+    margin-bottom: 32px;
+}
+
+.list-description {
+
+    margin-bottom: 8px;
 }
 
 /*.degree {

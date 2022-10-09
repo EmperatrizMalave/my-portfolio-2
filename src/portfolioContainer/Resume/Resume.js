@@ -229,6 +229,15 @@ export default function Resume() {
                     <li className='list-check'><FontAwesomeIcon className='icons-e' icon={faCircleCheck}/>
                         Search engine marketing
                     </li>
+                    <li className='list-check'><FontAwesomeIcon className='icons-e' icon={faCircleCheck}/>
+                        Search engine marketing
+                    </li>
+                    <li className='list-check'><FontAwesomeIcon className='icons-e' icon={faCircleCheck}/>
+                        Search engine marketing
+                    </li>
+                    <li className='list-check'><FontAwesomeIcon className='icons-e' icon={faCircleCheck}/>
+                        Search engine marketing
+                    </li>
                     
                   </div>
               </div>
@@ -240,35 +249,97 @@ export default function Resume() {
           </div>     
 
     {/*EDUCATION*/}
-    <div className='container'>  
-    <div className='row'>
-    <div className='collage-name col-6'>
+
+      <div className='container'>  
+        <div className='row'>
+          <div className='collage-name col-6'>
           <h2 className='title-2'>EDUCATION</h2>
-          <div className='container'>
-          <div className='row col-0.1'>
+          
+          <div className='container education-list'>
+          <div className='row justify-content-center'>
+          <div className='col-0.1'>
           <div className='line-design'>
           <span className='design-ov1'></span>
           <span className='design-ov2'></span>
-          </div>
-
-          <ul className='row col-9.9'>
-            <li className='name-list'>UNIVERSITY</li>
-            <li className='name-list'>BSC IN CSS2019 - Present</li>
-            <li className='name-list'>The University of British Columbia is a public research university with campuses in Vancouver and Kelowna, British Columbia.</li>
+          <ul className='col-9.9 list-descripcion'>
+              <li className='name-list'>UNIVERSITY</li>
+              <li className='name-list'>BSC IN CSS2019 - Present</li>
+              <li className='name-list'>the University of British Columbia is a public research</li>
+              <li className='name-list'>university with campuses</li>
           </ul>
           </div>
           </div>
-          
+          </div>
+          </div>
 
-    </div>
+          <div className='container education-list'>
+          <div className='row justify-content-center'>
+          <div className='col-0.1'>
+          <div className='line-design'>
+          <span className='design-ov1'></span>
+          <span className='design-ov2'></span>
+          <ul className='col-9.9 list-descripcion'>
+              <li className='name-list'>UNIVERSITY</li>
+              <li className='name-list'>BSC IN CSS2019 - Present</li>
+              <li className='name-list'>the University of British Columbia is a public research</li>
+              <li className='name-list'>university with campuses</li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+
+      </div>
 
 
      {/*EXPERIENCE*/}
     <div className='collage-name col-6'>
           <h2 className='title-2'>Experience</h2>
+
+          <div className='container education-list'>
+          <div className='row justify-content-center'>
+          <div className='col-0.1'>
+          <div className='line-design'>
+          <span className='design-ov1'></span>
+          <span className='design-ov2'></span>
+          <ul className='col-9.9 list-descripcion'>
+              <li className='name-list'>UNIVERSITY</li>
+              <li className='name-list'>BSC IN CSS2019 - Present</li>
+              <li className='name-list'>the University of British Columbia is a public research</li>
+              <li className='name-list'>university with campuses</li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+
+          <div className='container education-list'>
+          <div className='row justify-content-center'>
+          <div className='col-0.1'>
+          <div className='line-design'>
+          <span className='design-ov1'></span>
+          <span className='design-ov2'></span>
+          <ul className='col-9.9 list-descripcion'>
+              <li className='name-list'>UNIVERSITY</li>
+              <li className='name-list'>BSC IN CSS2019 - Present</li>
+              <li className='name-list'>the University of British Columbia is a public research</li>
+              <li className='name-list'>university with campuses</li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+
+
     </div>
+
+
+
+
     </div>
-</div>
+        </div>
     </div>
     </div>
     </section>
