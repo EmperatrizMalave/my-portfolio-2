@@ -164,7 +164,8 @@ export default function Resume() {
 
   {/* PROFESSIONAL SKILLS*/}
     <div className='row skill-area'>
-      <div className='col-lg-6 skill-area-circle'>
+      <div className='col-lg-6'>
+      <div className='skill-area-circle'>
         <div className='skill-box'>
           <h4 className='title'>
             PROFESIONAL SKILLS
@@ -172,25 +173,35 @@ export default function Resume() {
             <div>
               <div className='skill-list'>
                 <div className='single-skill'>
-                  <div className='main-of-the-circle-1'>
+                <div className='container'>
+                  <div className='row justify-content-center'>
+                  <div className='main-of-the-circle-1 col-4'>
                     <div className='circle-1'>90%</div>
                     <div className='text-circle'>Web development</div>
                   </div>
-                  {/* <div className='main-of-the-circle-1'>
+                  <div className='main-of-the-circle-1 col-4'>
                     <div className='circle-2'>90%</div>
                     <div className='text-circle'>Web development</div>
                   </div>
-                 <div className='main-of-the-circle-1'>
+                  </div>
+
+                  <div className='row justify-content-center'>
+                  <div className='main-of-the-circle-1 col-4'>
                     <div className='circle-3'>90%</div>
                     <div className='text-circle'>Web development</div>
                   </div>
-                  <div className='main-of-the-circle-1'>
+                  <div className='main-of-the-circle-1 col-4'>
                     <div className='circle-4'>90%</div>
                     <div className='text-circle'>Web development</div>
-                  </div>*/} 
+                  </div>
+                  </div>
+
+                  </div>{/**cierre container de circulos professional skills*/}
+                  
                   </div>
                   </div>
                 </div>
+              </div>
               </div>
       </div>
 

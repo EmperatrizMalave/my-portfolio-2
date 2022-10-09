@@ -18,6 +18,11 @@
     margin-right: 8px;
 
 }
+
+.title-p {
+color: #F1B500;
+
+}
 .my-btn-resume{ 
     padding: 8px 30px;
     border-radius: 4px;
@@ -261,17 +266,22 @@
 .text-circle {
 
     color: white;
-    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: center;
+
 }
 
-.main-of-the-circle-1 {
+/*.main-of-the-circle-1 {
+   
     margin-bottom: 19px;
     display: flex;
     width: 50%;
     align-items: center;
     flex-direction: column;
 
-}
+
+}*/
 
 
 /*PROFESIONAL SKILLS*/
