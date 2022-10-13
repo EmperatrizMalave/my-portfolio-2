@@ -2,7 +2,7 @@ import React from 'react'
 import './Resume.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faBadgeCheck, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 export default function Resume() {
   return (
     <section className='my-resume'>
