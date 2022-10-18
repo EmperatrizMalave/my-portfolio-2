@@ -1,7 +1,7 @@
 import React from 'react'
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faEnvelopeOpenText, faLocationDot, faMobile, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelopeOpenText, faLocationDot, faMobile, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
 
 export default function Contact() {
   return (
@@ -66,41 +66,54 @@ export default function Contact() {
         <div className='form-contact align-items-center justify-content-center d-flex'>
         <form className='form-contact1 row'>
             <label className='form-cont col-lg-6'>
-              <input className='input' type="text" placeholder='Name' required="required" />
+              <input className='input one' type="text" placeholder='Name' required="required" />
             </label>
             <label className='form-cont col-lg-6'>
-              <input className='input' type="text" name="email" placeholder='Email' required="required"/>
+              <input className='input two' type="text" name="email" placeholder='Email' required="required"/>
             </label>
 
-            <label className='row form-cont col-lg-12'>
-              <input className='input' type="text" name="Subject" placeholder='Subject' required="required" />
+            <label className='form-cont col-lg-12'>
+              <input className='input three' type="text" name="Subject" placeholder='Subject' required="required" />
             </label>
-            <label className='row form-cont col-lg-12'>
-              <textarea className='textarea' type="text" name="Message" placeholder='Message' required="required" />
+            <label className='form-cont col-lg-12'>
+              <textarea className='textarea four' type="text" name="Message" placeholder='Message' required="required" />
             </label>
-            <input className='input-submit' type="submit" value="Submit" />
+            <input className='input-submit five' type="submit" value="Send message" />
+
+        {/*SOCIAL MEDIA*/}
+        <div className='social-media'>
+        <div className='row'>
+            <div className='social col-lg-3'>
+              <a href='#' className='iconsl'>
+              <img src="https://img.icons8.com/fluency/46/000000/linkedin-2.png"/>
+              </a>
+            </div>
+            <div className='social col-lg-3'>
+            <a href='#' className='iconsf'>
+            <img src="https://img.icons8.com/plasticine/50/000000/github.png"/>
+            </a>
+            </div>
+            <div className='social col-lg-3'>
+            <a href='#' className='iconsg'>
+
+            </a>
+            </div>
+        </div>
+          </div>{/*FINAL SOCIAL MEDIA*/}
+          
         </form>{/*final de formulario de contanto*/}
 
-          <div className='social-media'>
-        
-          </div>
+
 
         </div>
+
       </div>
 
       <div className='col-lg-6'>
-        <div className='box'>
-
-        </div>
+      <div className='form-contact'></div>
       </div>
-
       </div>
       </div>{/*final de formulario de contanto y --*/}
-
-
-
-
-
 
 
 

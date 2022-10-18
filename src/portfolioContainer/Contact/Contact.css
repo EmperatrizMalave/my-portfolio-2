@@ -42,21 +42,15 @@
 
     padding: 20px;
     margin-top: 28px;
-    height: auto;
-    width: auto;
     background-color:#ebb6168c;
     border-radius: 10px;
-
 
 }
 
 .box {
     margin-top: 28px;
-    height: auto;
-    width: auto;
     background-color:#ebb6168c;
     border-radius: 10px;
-    color: white;
 
 }
 
@@ -64,21 +58,73 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #0d6efd;
-    background-color: #F1B500;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #F1B500;
+    background-color: transparent;
+    margin-top: 14px;
+    outline: none;
+    
     
 }
 
 .textarea {
-    background-color: #F1B500;
-    margin-bottom: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid #F1B500;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 100px;
+    outline: none;
 }
 
 .input-submit {
-    color: white;
+    
     background-color:#F1B500;
     border: none;
-    width: 50%;
+    width: 90%;
     height: 38px;
+    color: white;
+    flex: auto;
+    margin-top: 20px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
 
 }
+
+::placeholder {
+
+    color: white;
+
+
+}
+
+.form-cont {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.three{
+    width: 98%;
+
+}
+
+.four {
+    width: 98%;
+}
+
+.social {
+    height: 56px;
+    margin: 18px;
+    width: 40px;
+    background-color: #F1B500;
+
+    flex: 1%;
+}
+
+.iconsl {
+    justify-content: center;
+
+}
+
