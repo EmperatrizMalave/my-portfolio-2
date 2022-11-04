@@ -47,6 +47,22 @@
 
 }
 
+.form-contact-1{
+
+    padding: 20px;
+    margin-top: 28px;
+    background-color:#ebb6168c;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 454px;
+    width: 470px;
+    display: inline-flex;
+
+
+}
+
 .box {
     margin-top: 28px;
     background-color:#ebb6168c;
@@ -128,3 +144,17 @@
 
 }
 
+
+.code-qr-text {
+
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+
+}
+
+.tqr {
+    color: #F1B500;
+}

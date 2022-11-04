@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import QRCode from "qrcode";
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelopeOpenText, faLocationDot, faMobile, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelopeOpenText, faLocationDot, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
+import { Routes } from 'react-router-dom';
+
 
 export default function Contact() {
+  {/*CODIGO QR*/}
+
+
+    const [text] = useState("");
+    const canvasRef = useRef();
+  useEffect(() => {
+    QRCode.toCanvas(
+      canvasRef.current,
+      text || "www.google.com ",
+      (error) => error && console.error(error)
+    );
+  }, [text]);
+
+
+  const handleClick = ()=>{
+    window.open('linkedin.com/in/coromoto-emperatriz-malave-rengel-1b251a151/', '_blank')
+    }
+
   return (
+
+
+
 
         <section className='contact-me'>
         <div className='container'>
@@ -27,7 +51,7 @@ export default function Contact() {
               <FontAwesomeIcon className='icon-c' icon={faLocationDot} />
             </div>
             <div className='text-location-p'>MY LOCATION</div>
-            <p className='text-location'>700 Oak Street, Brockton MA 2301</p>
+            <p className='text-location'>Guadalajara México</p>
           </div>{/*FINAL My location*/}
         </div>
       
@@ -84,14 +108,20 @@ export default function Contact() {
         <div className='social-media'>
         <div className='row'>
             <div className='social col-lg-3'>
-              <a href='#' className='iconsl'>
+              <button onClick={handleClick}>
               <img src="https://img.icons8.com/fluency/46/000000/linkedin-2.png"/>
-              </a>
+              </button>
+              
+    
+              
+              
             </div>
             <div className='social col-lg-3'>
-            <a href='#' className='iconsf'>
+    
+              <a href='#' className='iconsf'>
             <img src="https://img.icons8.com/plasticine/50/000000/github.png"/>
             </a>
+
             </div>
             <div className='social col-lg-3'>
             <a href='#' className='iconsg'>
@@ -110,7 +140,16 @@ export default function Contact() {
       </div>
 
       <div className='col-lg-6'>
-      <div className='form-contact'></div>
+      <div className='form-contact-1'>
+      <div>
+       
+        <div className='code-qr'>
+        <p className='code-qr-text'>scan <span className='tqr'>qr</span> code</p>
+        <canvas ref={canvasRef} />
+        </div>
+        </div>
+          
+      </div>
       </div>
       </div>
       </div>{/*final de formulario de contanto y --*/}
@@ -123,3 +162,4 @@ export default function Contact() {
   </section>
   )
 }
+
