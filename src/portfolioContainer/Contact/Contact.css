@@ -1,7 +1,6 @@
 
 .contact-me {
-    background-color: #760F1C;
-    padding: 20px;
+    background-color: #76040a;
 }
 
 .container-contact {
@@ -80,7 +79,6 @@
     margin-top: 14px;
     outline: none;
     
-    
 }
 
 .textarea {
@@ -93,25 +91,9 @@
     outline: none;
 }
 
-.input-submit {
-    
-    background-color:#F1B500;
-    border: none;
-    width: 90%;
-    height: 38px;
-    color: white;
-    flex: auto;
-    margin-top: 20px;
-    border-radius: 6px;
-    text-transform: uppercase;
-    font-weight: bold;
-
-}
-
 ::placeholder {
 
     color: white;
-
 
 }
 
@@ -129,21 +111,98 @@
 .four {
     width: 98%;
 }
+/*efecto del boton de enviar*/
+.input-submit {
+
+    border:none;
+    background-color: #F1B500;
+    color: white;
+    font-size: 18px;
+    height: 40px;
+    width: 70%;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    margin-top: 32px;
+    font-weight: bold;
+}
+
+.input-submit:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -8px;
+    left: -8px;
+    border-top: 3px solid #0d6efd;
+    border-left: 3px solid #F1B500;
+    transition: all 0.25s;
+}
+
+.input-submit:hover:before,
+.input-submit:hover::after
+ {
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.input-submit:after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -8px;
+    right: -8px;
+    border-bottom: 3px solid #0d6efd;
+    border-right: 3px solid #F1B500;
+    transition: all 0.25s;
+}
+
+/*DISE#O DE BOTONES*/
+.red-social {
+    width: 34px;
+}
 
 .social {
-    height: 56px;
-    margin: 18px;
-    width: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    /*transition: all 0.5s;
+    position: relative;
+*/
+}
+
+.social:hover {
     background-color: #F1B500;
+    border-radius: 5px;
+    width: 50%;
+    -webkit-box-shadow: 1px -5px 44px -10px rgba(250,250,250,1);
+    -moz-box-shadow: 1px -5px 44px -10px rgba(250,250,250,1);
+    box-shadow: 1px -5px 44px -10px rgba(250,250,250,1);
+    }
 
-    flex: 1%;
+
+/*.social:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #76040a;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    height: 0%;
+    transition: all 0.5s;
 }
 
-.iconsl {
-    justify-content: center;
-
-}
-
+.social:before:hover {
+height: 100%;
+background-color: bisque;
+}*/
 
 .code-qr-text {
 

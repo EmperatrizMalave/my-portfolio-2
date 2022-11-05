@@ -1,18 +1,29 @@
 
 .container-header{
-background-color: #760F1C;
+background-color: #76040a;
 padding-top: 20px;
 padding-right: 20px;
 }
 
+.btn-logo {
+
+    background: none;
+    border: none;
+
+}
 .text-nav {
 
 color: white;
 }
+.nav-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .nav-item {
 
-background-color: #760F1C;
+background-color: #76040a;
 height: 65px;
 display: flex;
 align-items: center;

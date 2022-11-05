@@ -11,10 +11,16 @@ import About from './About/About';
 import Portfolio from './Portfolio/Portfolio';
 import Contact from './Contact/Contact';
 export default function MenuHeader() {
+
 return(
     <Router>
     <div className='container-fluid container-header show'>
-        <nav>
+        <nav className='nav-page'>
+            <button className='btn-logo'>
+                <img className='my-logo' src="https://i.ibb.co/xMN5K3T/Logo-cm.png" alt="mifoto9" border="0"/>
+                <a href='#'></a>
+            </button>
+        
             <ul className="nav justify-content-end list">
                 <li className="nav-item line">
                     <Link to='/' className="nav-link text-nav">HOME</Link>

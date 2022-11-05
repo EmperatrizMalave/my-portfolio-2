@@ -1,5 +1,6 @@
 .container-info{
-    padding: 2%;
+    padding: 4%;
+    padding-top: 2.5%;
     background-color: #760F1C;
     }
     
@@ -11,7 +12,7 @@
     border-right: 20px solid #131CD8;
     border-bottom: 20px solid #F1B500;
     border-left: 20px solid #F1B500;
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
     
     }

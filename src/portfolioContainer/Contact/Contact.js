@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import QRCode from "qrcode";
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelopeOpenText, faLocationDot, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
-import { Routes } from 'react-router-dom';
+import { faEnvelope, faEnvelopeOpenText, faLocationDot, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Contact() {
@@ -21,13 +20,7 @@ export default function Contact() {
   }, [text]);
 
 
-  const handleClick = ()=>{
-    window.open('linkedin.com/in/coromoto-emperatriz-malave-rengel-1b251a151/', '_blank')
-    }
-
   return (
-
-
 
 
         <section className='contact-me'>
@@ -102,47 +95,40 @@ export default function Contact() {
             <label className='form-cont col-lg-12'>
               <textarea className='textarea four' type="text" name="Message" placeholder='Message' required="required" />
             </label>
-            <input className='input-submit five' type="submit" value="Send message" />
+            <div className='m-0 row justify-content-center'>
+                <button className='input-submit five justify-content-center' type="submit" value="Send message">SEND</button>
+            </div>
 
         {/*SOCIAL MEDIA*/}
         <div className='social-media'>
         <div className='row'>
-            <div className='social col-lg-3'>
-              <button onClick={handleClick}>
-              <img src="https://img.icons8.com/fluency/46/000000/linkedin-2.png"/>
+            {/*GMAIL, RED SOCIAL*/}
+            <div className=' col-lg-4 d-flex justify-content-center align-items-center'>
+              <button className='social'>
+                <img className='red-social' src='https://i.ibb.co/m584rJw/7115264-new-logo-gmail-icon.png'/>
               </button>
-              
-    
-              
-              
             </div>
-            <div className='social col-lg-3'>
-    
-              <a href='#' className='iconsf'>
-            <img src="https://img.icons8.com/plasticine/50/000000/github.png"/>
-            </a>
-
+            {/*GITHUB, RED SOCIAL*/}
+            <div className='col-lg-4 d-flex justify-content-center align-items-center'>
+              <button className='social'>
+                <img className='red-social' src="https://i.ibb.co/J7tgphv/211904-social-github-icon.png"/>
+              </button>
             </div>
-            <div className='social col-lg-3'>
-            <a href='#' className='iconsg'>
-
-            </a>
+            {/*LINKEDIN, RED SOCIAL*/}
+            <div className='col-lg-4 d-flex justify-content-center align-items-center'>
+              <button className='social'>
+                <img className='red-social' src='https://i.ibb.co/p4yc9mY/3171649-linkedin-social-icon.png'/>
+              </button>
             </div>
         </div>
           </div>{/*FINAL SOCIAL MEDIA*/}
-          
         </form>{/*final de formulario de contanto*/}
-
-
-
         </div>
-
       </div>
 
       <div className='col-lg-6'>
       <div className='form-contact-1'>
       <div>
-       
         <div className='code-qr'>
         <p className='code-qr-text'>scan <span className='tqr'>qr</span> code</p>
         <canvas ref={canvasRef} />
@@ -153,10 +139,6 @@ export default function Contact() {
       </div>
       </div>
       </div>{/*final de formulario de contanto y --*/}
-
-
-
-
 
   </div>
   </section>
