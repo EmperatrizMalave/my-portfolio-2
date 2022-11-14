@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import QRCode from "qrcode";
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faEnvelopeOpenText, faLocationDot, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
-
+import { faEnvelopeOpenText, faLocationDot, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   {/*CODIGO QR*/}
@@ -19,6 +19,20 @@ export default function Contact() {
     );
   }, [text]);
 
+  {/*conexion del correo*/}
+
+  const sendEmail = (event) =>{
+     {/*1. OBTIENE INFORMACION INGRESADA*/}
+     event.preventDefault()
+
+      {/*2. Informacion necesaria para traer informacion desde la libreria email js, la cual permite enviar correo electronico https://www.emailjs.com/docs/sdk/send-form/*/}
+    emailjs.sendForm('service_378v1yl','template_1go54gk','#myForm','wSgcSWogQn_yjUC4b')
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+  }
 
   return (
 
@@ -81,19 +95,19 @@ export default function Contact() {
       <div className='row'>
       <div className='col-lg-6'>
         <div className='form-contact align-items-center justify-content-center d-flex'>
-        <form className='form-contact1 row'>
+        <form className='form-contact1 row' onSubmit={sendEmail} id='myForm'>
             <label className='form-cont col-lg-6'>
-              <input className='input one' type="text" placeholder='Name' required="required" />
+              <input className='input one' type="text" placeholder='Name' required="required" name='user_name' />
             </label>
             <label className='form-cont col-lg-6'>
-              <input className='input two' type="text" name="email" placeholder='Email' required="required"/>
+              <input className='input two' type="text" name="user_email" placeholder='Email' required="required"/>
             </label>
 
             <label className='form-cont col-lg-12'>
-              <input className='input three' type="text" name="Subject" placeholder='Subject' required="required" />
+              <input className='input three' type="text" name="user_subject" placeholder='Subject' required="required" />
             </label>
             <label className='form-cont col-lg-12'>
-              <textarea className='textarea four' type="text" name="Message" placeholder='Message' required="required" />
+              <textarea className='textarea four' type="text" name="user_message" placeholder='Message' required="required" />
             </label>
             <div className='m-0 row justify-content-center'>
                 <button className='input-submit five justify-content-center' type="submit" value="Send message">SEND</button>
@@ -144,4 +158,3 @@ export default function Contact() {
   </section>
   )
 }
-
