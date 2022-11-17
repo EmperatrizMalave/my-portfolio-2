@@ -8,13 +8,9 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact() {
 
-    {/*VALIDACION DE FORMULARIO*/}
+    {/*VALIDACION DE FORMULARIO HOOK*/}
 
     const {register, formState:{errors}, handleSubmit} = useForm()
-
-   /*const onSubmit = (data) => {
-      console.log(data)
-   }*/
 
     {/*CODIGO QR*/}
 
@@ -45,9 +41,7 @@ const sendEmail = (event) =>{
 
 
   return (
-
-
-        <section className='contact-me'>
+        <section className='contact-me container d-flex justify-center'>
         <div className='container'>
           {/*AREA DE TITULO PRINCIPAL*/}
         <div className='row'>
@@ -61,7 +55,7 @@ const sendEmail = (event) =>{
       {/*My location*/}
       <div className='container'>
         <div className='row'>
-          <div className='col-lg-4'>
+          <div className='col-lg-4 col-md-6'>
             <div className='container-contact'>
               <div className='header-circle'>
                 <FontAwesomeIcon className='icon-c' icon={faLocationDot} />
@@ -72,24 +66,23 @@ const sendEmail = (event) =>{
           </div>
       
         {/*PHONE NUMBER*/}
-        <div className='col-lg-4'>
+        <div className='col-lg-4 col-md-6'>
           <div className='container-contact'>
         <div className='header-circle'>
               <FontAwesomeIcon className='icon-c' icon={faPhoneFlip} />
             </div>
             <div className='text-location-p'>PHONE NUMBER</div>
-            <p className='text-location'>33-17621177</p>
-
+              <p className='text-location'>33-17621177</p>
           </div>
         </div>{/*FINAL PHONE NUMBER*/}
         {/*EMAIL ADDRESS*/}
-        <div className='col-lg-4'>
+        <div className='col-lg-4 col-md-12'>
         <div className='container-contact'>
         <div className='header-circle'>
               <FontAwesomeIcon className='icon-c' icon={faEnvelopeOpenText} />
             </div>
             <div className='text-location-p'>EMAIL ADDRESS</div>
-            <p className='text-location'>EMPERATRIZ.668@GNMAIL.COM</p>
+            <p className='text-location'>EMPERATRIZ.668@GMAIL.COM</p>
 
         </div>
         </div>{/*FINAL EMAIL ADDRESS*/}
@@ -103,26 +96,30 @@ const sendEmail = (event) =>{
       <div className='container'>
       <div className='row'>
       <div className='col-lg-6'>
-        <div className='form-contact align-items-center justify-content-center d-flex'>
+        <div className='form-contact'>
         <form className='form-contact1 row' id='myForm' onSubmit={handleSubmit(sendEmail)}>
             <label className='form-cont col-lg-6'>
                 <input className='input one' type="text" placeholder='Name*' {...register('user_name', {required: true, maxLength:16})}/>
             </label>
+                    {/*VALIDACION CON HOOK FORM CON MENSAJE DE ERROR DE NAME*/}
                 {errors.user_name?.type === 'required' && <p className='msj onen'>The name field is required</p>}
                 {errors.user_name?.type === 'maxLength' && <p className='msj twon'>The name field must have less than 16 characters</p>}
             <label className='form-cont col-lg-6'>
                 <input className='input two' type="text" placeholder='Email*' {...register('user_email', {required: true, pattern: /\S+@\S+\.\S+/ })}/>
             </label>
+                    {/*VALIDACION CON HOOK FORM CON MENSAJE DE ERROR DE EMAIL*/}
                 {errors.user_email?.type === 'required' && <p className='msj threeem'>The format of the email field is required</p>}
                 {errors.user_email?.type === 'pattern' && <p className='msj fourem'>The format of the email field is incorrect</p>}
             <label className='form-cont col-lg-12'>
                 <input className='input three' type="text" placeholder='Subject*' {...register('user_subject', {required: true, maxLength:40})}/>
             </label>
+                    {/*VALIDACION CON HOOK FORM CON MENSAJE DE ERROR DE SUBJECT*/}
                 {errors.user_subject?.type === 'required' && <p className='msj fivesb'>The subject field is required</p>}
                 {errors.user_subject?.type === 'maxLength' && <p className='msj sixsb'>The field must be less than 40 characters</p>}
             <label className='form-cont col-lg-12'>
                 <textarea className='textarea four' type="text" placeholder='Message*' {...register('user_message',{required: true, maxLength:60})}/>
             </label>
+                    {/*VALIDACION CON HOOK FORM CON MENSAJE DE ERROR DE MESSAGE*/}
                 {errors.user_message?.type === 'required' && <p className='msj eightms'>The message field is required</p>}
                 {errors.user_message?.type === 'maxLength' && <p className='msj ninems'>The field must be less than 60 characters</p>}
             <div className='m-0 row justify-content-center'>
@@ -131,7 +128,7 @@ const sendEmail = (event) =>{
 
         {/*SOCIAL MEDIA*/}
         <div className='social-media'>
-        <div className='row'>
+        <div className='row d-flex-center'>
             {/*GMAIL, RED SOCIAL*/}
             <div className=' col-lg-4 d-flex justify-content-center align-items-center'>
               <button className='social'>

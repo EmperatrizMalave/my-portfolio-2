@@ -15,13 +15,13 @@ export default function MenuHeader() {
 return(
     <Router>
     <div className='container-fluid container-header show'>
-        <nav className='nav-page'>
-            <button className='btn-logo'>
+        <nav className='nav-page row'>
+            <button className='btn-logo col-lg-6 col-md-6 col-sm-6 col-6'>
                 <img className='my-logo' src="https://i.ibb.co/xMN5K3T/Logo-cm.png" alt="mifoto9" border="0"/>
                 <a href='#'></a>
             </button>
         
-            <ul className="nav justify-content-end list">
+            <ul className="nav justify-content-end list col-lg-6 col-md-6 col-sm-6 col-6">
                 <li className="nav-item line">
                     <Link to='/' className="nav-link text-nav">HOME</Link>
                 </li>
