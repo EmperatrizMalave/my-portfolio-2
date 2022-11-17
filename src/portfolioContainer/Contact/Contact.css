@@ -98,7 +98,7 @@
 }
 
 .form-cont {
-    padding: 10px;
+    padding: 8px;
     display: flex;
     align-items: center;
 }
@@ -147,7 +147,13 @@
 
 
 }
+.one, .two, .three, .four:focus {
+    
+    color: white;
+    background-color:none;
 
+
+}
 .input-submit:after{
     content: "";
     position: absolute;
@@ -185,6 +191,11 @@
     }
 
 
+.msj {
+    color: white;
+    font-size: 13px;
+    margin-top: none;
+}
 /*.social:before {
     content: "";
     position: absolute;

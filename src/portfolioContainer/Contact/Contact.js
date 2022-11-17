@@ -3,11 +3,20 @@ import QRCode from "qrcode";
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeOpenText, faLocationDot, faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
+import {useForm} from "react-hook-form";
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-  {/*CODIGO QR*/}
 
+    {/*VALIDACION DE FORMULARIO*/}
+
+    const {register, formState:{errors}, handleSubmit} = useForm()
+
+   /*const onSubmit = (data) => {
+      console.log(data)
+   }*/
+
+    {/*CODIGO QR*/}
 
     const [text] = useState("");
     const canvasRef = useRef();
@@ -21,18 +30,19 @@ export default function Contact() {
 
   {/*conexion del correo*/}
 
-  const sendEmail = (event) =>{
+const sendEmail = (event) =>{
      {/*1. OBTIENE INFORMACION INGRESADA*/}
-     event.preventDefault()
 
-      {/*2. Informacion necesaria para traer informacion desde la libreria email js, la cual permite enviar correo electronico https://www.emailjs.com/docs/sdk/send-form/*/}
+    {/*2. Informacion necesaria para traer informacion desde la libreria email js, la cual permite enviar correo electronico https://www.emailjs.com/docs/sdk/send-form/*/}
+    
     emailjs.sendForm('service_378v1yl','template_1go54gk','#myForm','wSgcSWogQn_yjUC4b')
     .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
+        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
-       console.log('FAILED...', error);
+        console.log('FAILED...', error);
     });
   }
+
 
   return (
 
@@ -46,32 +56,31 @@ export default function Contact() {
       <h2>CONTACT<span className='title-p'> ME</span></h2>
           </div>
         </div>
-     
 
-   {/*AREA SOBRE INFORMACION DE CONTACTO*/}
+{/*AREA SOBRE INFORMACION DE CONTACTO*/}
       {/*My location*/}
       <div className='container'>
         <div className='row'>
-        <div className='col-lg-4'>
-          <div className='container-contact'>
-            <div className='header-circle'>
-              <FontAwesomeIcon className='icon-c' icon={faLocationDot} />
-            </div>
-            <div className='text-location-p'>MY LOCATION</div>
-            <p className='text-location'>Guadalajara México</p>
-          </div>{/*FINAL My location*/}
-        </div>
+          <div className='col-lg-4'>
+            <div className='container-contact'>
+              <div className='header-circle'>
+                <FontAwesomeIcon className='icon-c' icon={faLocationDot} />
+              </div>
+                <div className='text-location-p'>MY LOCATION</div>
+              <p className='text-location'>Guadalajara México</p>
+            </div>{/*FINAL My location*/}
+          </div>
       
         {/*PHONE NUMBER*/}
         <div className='col-lg-4'>
-        <div className='container-contact'>
+          <div className='container-contact'>
         <div className='header-circle'>
               <FontAwesomeIcon className='icon-c' icon={faPhoneFlip} />
             </div>
             <div className='text-location-p'>PHONE NUMBER</div>
             <p className='text-location'>33-17621177</p>
 
-        </div>
+          </div>
         </div>{/*FINAL PHONE NUMBER*/}
         {/*EMAIL ADDRESS*/}
         <div className='col-lg-4'>
@@ -95,22 +104,29 @@ export default function Contact() {
       <div className='row'>
       <div className='col-lg-6'>
         <div className='form-contact align-items-center justify-content-center d-flex'>
-        <form className='form-contact1 row' onSubmit={sendEmail} id='myForm'>
+        <form className='form-contact1 row' id='myForm' onSubmit={handleSubmit(sendEmail)}>
             <label className='form-cont col-lg-6'>
-              <input className='input one' type="text" placeholder='Name' required="required" name='user_name' />
+                <input className='input one' type="text" placeholder='Name*' {...register('user_name', {required: true, maxLength:16})}/>
             </label>
+                {errors.user_name?.type === 'required' && <p className='msj onen'>The name field is required</p>}
+                {errors.user_name?.type === 'maxLength' && <p className='msj twon'>The name field must have less than 16 characters</p>}
             <label className='form-cont col-lg-6'>
-              <input className='input two' type="text" name="user_email" placeholder='Email' required="required"/>
+                <input className='input two' type="text" placeholder='Email*' {...register('user_email', {required: true, pattern: /\S+@\S+\.\S+/ })}/>
             </label>
-
+                {errors.user_email?.type === 'required' && <p className='msj threeem'>The format of the email field is required</p>}
+                {errors.user_email?.type === 'pattern' && <p className='msj fourem'>The format of the email field is incorrect</p>}
             <label className='form-cont col-lg-12'>
-              <input className='input three' type="text" name="user_subject" placeholder='Subject' required="required" />
+                <input className='input three' type="text" placeholder='Subject*' {...register('user_subject', {required: true, maxLength:40})}/>
             </label>
+                {errors.user_subject?.type === 'required' && <p className='msj fivesb'>The subject field is required</p>}
+                {errors.user_subject?.type === 'maxLength' && <p className='msj sixsb'>The field must be less than 40 characters</p>}
             <label className='form-cont col-lg-12'>
-              <textarea className='textarea four' type="text" name="user_message" placeholder='Message' required="required" />
+                <textarea className='textarea four' type="text" placeholder='Message*' {...register('user_message',{required: true, maxLength:60})}/>
             </label>
+                {errors.user_message?.type === 'required' && <p className='msj eightms'>The message field is required</p>}
+                {errors.user_message?.type === 'maxLength' && <p className='msj ninems'>The field must be less than 60 characters</p>}
             <div className='m-0 row justify-content-center'>
-                <button className='input-submit five justify-content-center' type="submit" value="Send message">SEND</button>
+                  <button className='input-submit five justify-content-center' type="submit" value="Send message">SEND</button>
             </div>
 
         {/*SOCIAL MEDIA*/}
