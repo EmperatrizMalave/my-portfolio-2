@@ -14,14 +14,21 @@ export default function MenuHeader() {
 
 return(
     <Router>
-    <div className='container-fluid container-header show'>
-        <nav className='nav-page row'>
-            <button className='btn-logo col-lg-6 col-md-6 col-sm-6 col-6'>
+    <div className='container-header'>
+        <div className='container-herader1'>     
+            <button className='btn-logo'>
                 <img className='my-logo' src="https://i.ibb.co/xMN5K3T/Logo-cm.png" alt="mifoto9" border="0"/>
                 <a href='#'></a>
+            </button> 
+
+            <button className='btn-icon'>
+                <svg className='header-svg' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
             </button>
-        
-            <ul className="nav justify-content-end list col-lg-6 col-md-6 col-sm-6 col-6">
+    <div className='nav-ctn'>
+        <nav className='nav-list'>
+            <ul className="nav">
                 <li className="nav-item line">
                     <Link to='/' className="nav-link text-nav">HOME</Link>
                 </li>
@@ -39,7 +46,8 @@ return(
                 </li>
             </ul>
             </nav>
-
+            </div>
+</div>
         <Routes>
             <Route path="/" element={ <Home /> } />
             <Route path="/about" element={ <About /> } />
@@ -47,7 +55,8 @@ return(
             <Route path="/portfolio" element={ <Portfolio /> } />
             <Route path="/contact" element={ <Contact /> } />
         </Routes>
-    </div>
+        
+        </div>
     </Router>
 );
 
