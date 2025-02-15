@@ -8,7 +8,7 @@ export default function Home() {
         <div className='container-info'>
             <div className='row'>
             <div className='container-image col-6'>
-                <img className='my-image' src="https://i.ibb.co/ykDXtdL/mifotoo.jpg" alt="mifotoo" border="0"/>  
+                <img className='my-image' src="https://i.ibb.co/3ySg9yvT/mifoto.jpg" alt="mifoto" border="0"/>  
             </div>
                 <div className='my-info col-6'>
                     <div className='greeting-father'>

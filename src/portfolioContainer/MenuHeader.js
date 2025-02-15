@@ -17,7 +17,7 @@ return(
     <div className='container-header'>
         <div className='container-herader1'>     
             <button className='btn-logo'>
-                <img className='my-logo' src="https://i.ibb.co/xMN5K3T/Logo-cm.png" alt="mifoto9" border="0"/>
+                <img className='my-logo' img src="https://i.ibb.co/3ySg9yvT/mifoto.jpg" alt="mifoto" border="0"/>
                 <a href='#'></a>
             </button> 
 
